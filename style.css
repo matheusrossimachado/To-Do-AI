@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial;
+}
+
+#container{
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 700px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+#list{
+    margin-top: 12.5px;
+    height: 500px;
+    width: 350px;
+}
+
+button{
+    background-color: blue;
+    color: whitesmoke;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    margin-top: 12.5px;
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 15px;
+    
+}
+
+#popup-container {
+  display: flex; /* esconde inicialmente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+#popup{
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
+    background-color:whitesmoke;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+
+}
+
+#newtask{
+    
+    background-color: whitesmoke;
+    padding: 10px;
+    font-family: 'Arial';
+    font-size: large;
+    outline: none;
+    line-height: normal;
+    box-shadow: 
+        inset 1px 1px 3px #bebebe,
+        inset -2px -2px 8px #ffffff;
+
+    border: none;
+    margin: 5px;
+    width: 300px;
+    height: 250px;
+    resize: none;
+}
+
+#conf-canc{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.conf-canc-btn{
+    width: 95px;
+}
+
+#cancel-btn{
+    background-color: rgb(228, 9, 9);
+}
