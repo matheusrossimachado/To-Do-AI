@@ -8,14 +8,19 @@
 </head>
 <body>
     <div id="container">
-        <div id="box">
-
+        <div id="list-container">
             <h2>To-do list</h2>
-
-            <div id="list"></div>
-
+            <div id="list">
+                <div id="container-header">
+                    <div id="header-begin">
+                        <p>Creation</p>
+                        <p>Task</p>
+                    </div>
+                        <p>exclude</p>
+                </div>
+                <div class="line"></div>
+            </div>
             <button id="new-task-btn" onclick="addtask()">Add Task</button>
-
         </div>
 
         
@@ -24,13 +29,15 @@
     <div id="popup-container">
         <div id="popup">
                 <h2>Add Task</h2>
-                <textarea placeholder="What is your new task?" id="newtask"></textarea>
+                <textarea onclick="verify_warning_msg()" placeholder="What is your new task?" id="newtask"></textarea>
 
                 <div id="conf-canc" >
-                    <button id="confirm-task-btn" class="conf-canc-btn" >Confirm</button>
-                    <button id="cancel-btn" class="conf-canc-btn">Cancel</button>
+                    <button onclick="confirm_task()" id="confirm-task-btn" class="conf-canc-btn" >Confirm</button>
+                    <button onclick="cancel_task()" id="cancel-btn" class="conf-canc-btn">Cancel</button>
                 </div>
             </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
