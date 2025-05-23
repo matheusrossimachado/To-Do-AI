@@ -1,6 +1,7 @@
 const popup_container = document.getElementById("popup-container");
 let warning_is_empty = true;
 let historyTasks = "";
+const userId = "user127"; 
 function addtask(){
     popup_container.style.display = 'flex';
 }
@@ -56,9 +57,18 @@ function confirm_task(){
     del.src = 'trash_icon_50x50.png';
     del.alt = 'delete-button';
 
-    del.onclick = function () {
-        items.remove(); 
-    };  
+   // Salva o texto da tarefa numa variável para reaproveitar
+const taskText = document.getElementById("newtask").value.trim();
+item.innerText = taskText;
+
+// ... depois, dentro do botão delete:
+del.onclick = function () {
+    items.remove();
+
+    // Remove a tarefa do historyTasks (por linha exata)
+    const linhas = historyTasks.split("\n").filter(l => l.trim() !== "" && l.trim() !== taskText);
+    historyTasks = linhas.join("\n") + (linhas.length > 0 ? "\n" : "");
+}; 
 
     items.appendChild(begin_task);
     items.appendChild(del);
@@ -84,8 +94,6 @@ function verify_warning_msg(){
 
 const textarea = document.getElementById("chat");
 const responseContainer = document.getElementById("agent-responses");
-
-const userId = "user126"; 
 
 textarea.addEventListener("keydown", async function (event) {
     if (event.key == "Enter" && !event.shiftKey){

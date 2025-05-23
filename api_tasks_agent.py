@@ -28,6 +28,7 @@ prompt_inicial = (
     "be helpful and nice to the users"
     "wait for the answers, be direct and dont take so many words to answer"
     "history_tasks can be empty so dont worry about that, it can happen and its normal"
+    "history changes(edited or sometimes deleted), so the only data history that counts is the one you have just received"
 )
 
 human_template = "Tasks:\n{tasks}\n\nUser question:\n{question}"
